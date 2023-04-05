@@ -1,0 +1,288 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+  font-family: "Public Sans", sans-serif;
+}
+
+/* common code */
+.main-content {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+:root {
+  --main-color: #143c3c;
+  --color-desc: #7d8188;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 173px;
+  height: 57px;
+  background: var(--main-color);
+  border: 1.5px solid var(--main-color);
+  border-radius: 40px;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 1.55556;
+  color: #ffffff;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.desc {
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.71428;
+  color: var(--color-desc);
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+li {
+  list-style-type: none;
+}
+
+img {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* NAV */
+body {
+  height: 10000px;
+}
+
+nav {
+  padding-top: 28px;
+  background-color: #ccc;
+  position: sticky;
+  top: -18px;
+  z-index: 10;
+}
+
+.nav-content {
+  padding-bottom: 8px;
+  margin-bottom: 5px;
+}
+
+.nav-content,
+.nav-logo,
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo span {
+  margin-left: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #152427;
+  font-size: 1.8rem;
+  line-height: 1.55556;
+}
+
+.navigation {
+  margin-left: auto;
+  padding-right: 88px;
+  gap: 38px;
+}
+
+.navigation li:hover {
+  position: relative;
+}
+
+.navigation li:hover .navigation-li__item {
+  display: block;
+  bottom: -28px;
+  left: 8px;
+}
+
+.navigation li .navigation-li__item {
+  position: absolute;
+  bottom: -6px;
+  content: "";
+  display: none;
+  width: 16px;
+  height: 2px;
+  background: var(--main-color);
+}
+
+.navigation li a {
+  padding: 8px;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 1.55556;
+  color: #575d5e;
+}
+
+.navigation li a:hover {
+  color: #152427;
+}
+
+.nav-line {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    #ffffff 0%,
+    #dddcdc 51.09%,
+    rgba(213, 213, 213, 0) 99.68%
+  );
+}
+
+/* HEADER */
+/* HEADER TITLE */
+header {
+  padding-top: 60px;
+  padding-bottom: 88px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-content .header-title {
+  padding-top: 43px;
+}
+
+.header-content .header-heading {
+  width: 368px;
+  font-weight: 800;
+  font-size: 5rem;
+  line-height: 1.2;
+  color: #152427;
+}
+
+.header-content .header-desc {
+  padding-top: 20px;
+  width: 368px;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 1.55556;
+  color: #575d5e;
+}
+
+.header-content .header-cta {
+  display: inline-block;
+  margin-top: 42px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: none;
+}
+
+.header-content .header-cta .pause-icon {
+  padding-left: 36px;
+  padding-right: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.pause-icon .pause-icon__part-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 43px;
+  background: #83a17d;
+  border-radius: 50%;
+  margin-left: -21px;
+}
+
+.header-content .header-cta span {
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.66667;
+  color: #152427;
+}
+
+/* HEADER IMAGE */
+.header-image .header-image__list {
+  position: relative;
+  padding-right: 25px;
+  display: flex;
+  gap: 20px;
+}
+
+.header-image .header-image__item {
+  position: relative;
+  z-index: 1;
+}
+
+.header-image .header-image__background {
+  position: absolute;
+  right: 176px;
+  top: 130px;
+  width: 340px;
+  height: 340px;
+  background: #4dbb9a;
+  filter: blur(137px);
+}
+
+.header-image .header-image__list .header-image__item {
+  width: 202px;
+  height: 466px;
+  border-radius: 110px;
+}
+
+.header-image .header-image__list .header-image__item:nth-of-type(2) {
+  margin-top: 77px;
+}
+
+.header__ball-group,
+.header__ball-group > img {
+  position: absolute;
+  z-index: 5;
+}
+
+.header__ball-group img:first-child {
+  top: -35px;
+  left: -173px;
+}
+
+.header__ball-group img:last-child {
+  top: -16px;
+  left: -205px;
+}
+
+.ball-group__two {
+  transform: rotate(175.95deg);
+  bottom: -26px;
+  right: 240px;
+}
+
+/* LOGO SECTION */
+.logo {
+  margin-top: 42px;
+}
+
+.logo-content {
+  display: flex;
+  align-self: center;
+  gap: 64px;
+  padding: 76px 121px;
+  background: #e2eddf;
+  border-radius: 100.5px;
+}
+
+
