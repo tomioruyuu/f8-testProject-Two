@@ -424,6 +424,7 @@ header {
 }
 
 .services-cards__item img {
+  cursor: pointer;
   display: block;
   border-radius: 20px 20px 0px 0px;
   width: 370px;
@@ -464,6 +465,46 @@ header {
   margin-top: 157px;
 }
 
+.about-content {
+  display: flex;
+  gap: 64px;
+}
+
+/* ABOUT IMAGE */
+.about-img {
+  position: relative;
+  padding-top: 13px;
+  display: flex;
+  align-items: center;
+  gap: 21px;
+}
+
+.about-img > img {
+  width: 284px;
+  height: 480px;
+  box-shadow: 0px 2px 20px 7px rgba(94,89,89,0.1);
+  border-radius: 210px;
+}
+
+.about-img img:first-child {
+  margin-top: 77px;
+}
+
+.about-img .about__ball-group img  {
+  position: absolute;
+}
+
+.about-img .about__ball-group img:first-child {
+  top: -55px;
+  left: 82px;
+} 
+
+.about-img .about__ball-group img:last-child {
+  top: -15px;
+  left: 46px;
+}
+
+/* ABOUT TITLE */
 .about-title {
   width: 485px;
 }
