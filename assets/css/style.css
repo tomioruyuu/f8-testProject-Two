@@ -1011,11 +1011,14 @@ header {
 /* BLOG CARDS */
 .blog-cards {
   margin-top: 90px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
 
 .blog-cards__item {
   border-radius: 40px;
-  width: 317px;
+  width: 360px;
 }
 
 .blog-cards__item img {
@@ -1023,6 +1026,21 @@ header {
   width: 360px;
   height: 317px;
   border-radius: 40px 40px 0px 0px;
+}
+
+.blog-cards__item--content {
+  position: relative;
+  width: 100%;
+  padding: 26px 0 12px 0;
+  border-radius: 0px 0px 20px 20px;
+  height: 203px;
+  transition: 0.5s;
+}
+
+.blog-cards__item--content:hover {
+  padding-left: 30px;
+  padding-right: 33px;
+  box-shadow: 0px 12px 74px rgba(91, 91, 91, 0.25);
 }
 
 .blog-cards__item .blog-cards__item--btn {
@@ -1037,29 +1055,97 @@ header {
   color: #000000;
   background: #e2eddf;
   border-radius: 20px;
+  transition: 0.5s;
 }
 
-.blog-cards__item--heading {
-  margin-top: 13px;
+.blog-cards__item:hover .blog-cards__item--btn {
+  color: #e2eddf;
+  background: var(--main-color);
+}
+
+.blog-cards__item .blog-cards__item--heading {
+  padding-right: 10px;
+  margin-top: 10px;
   font-weight: 600;
   font-size: 1.8rem;
   line-height: 1.66667;
   color: var(--main-color);
+  transition: 0.5s;
+}
+
+.blog-cards__item--content:hover .blog-cards__item--heading {
+  width: 281px;
 }
 
 .blog-cards__item--line {
-  margin-top: 38px;
-  width: 100%;
+  position: absolute;
+  top: 164px;
+  width: 94%;
   height: 1px;
   background: #c4c4c4;
+  transition: 0.5s;
+}
+
+.blog-cards__item--content:hover .blog-cards__item--line {
+  width: 83%;
 }
 
 .blog-cards__item--time {
+  position: absolute;
   margin-left: auto;
+  top: 180px;
+  right: 13px;
   width: 90px;
-  margin-top: 16px;
   font-weight: 500;
   font-size: 1rem;
-  line-height: 1.2 ;
+  line-height: 1.2;
   color: #575d5e;
 }
+
+.blog-cards__item--content:hover .blog-cards__item--time {
+  right: 23px;
+}
+
+/* FOOTER */
+
+footer {
+  margin-top: 102px;
+  padding: 72px 0 50px;
+  background: var(--main-color);
+}
+
+.footer-heading {
+  color: #ffffff;
+}
+
+.footer__add-info {
+  display: flex;
+  padding-top: 25px;
+}
+
+.footer__add-info input {
+  background-color: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-weight: 600;
+  font-size: 2.2rem;
+  line-height: 1;
+  color: #6a8383;
+}
+
+input:focus {
+  outline: none;
+}
+
+.footer__add-info .footer__right-direction {
+  padding: 5px;
+  cursor: pointer;
+  width: 26px;
+  height: 16px;
+  color: #C4C4C4;
+  padding-left: 108px;
+  margin-top: 10px;
+}
+
+
